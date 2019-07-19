@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="../indexstyles.css" type="text/css" rel="stylesheet">
+
+    <title>Cards Against Discord Help</title>
+</head>
+
+<style>
+    .sidebar {
+        height: 100%;
+        width: 180px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #1c1d1f;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20.0px;
+        color: rgb(255, 255, 255);
+        display: block;
+        transition: padding 0.5s, font-size 0.25s;
+    }
+
+    .sidebar a:hover {
+        padding: 15px 16px 15px 16px;
+        font-size: 25.0px;
+        color: #797979;
+    }
+
+    .header {
+        font-size: 25px;
+        text-decoration: none;
+        color: #838383;
+        font-weight: bold;
+        padding: 0px 15px;
+    }
+
+    /* .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+    }
+
+    .loaded * {
+        -webkit-transition: all;
+        -moz-transition: all;
+        -ms-transition: all;
+        -o-transition: all;
+    } */
+
+    .main {
+        margin-left: 180px;
+        padding: 0px 0px;
+    }
+
+    .command {
+        border-spacing: 0px 25px;
+        padding: 1px 15px 5px 15px;
+        border: hidden;
+        border-width: 5px;
+        border-color: #797979;
+        background-color: #202224;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    .format {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .spacer {
+        padding: 15px 15px 5px 15px;
+        font-size: 35px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .code {
+        color: #beaf23
+    }
+</style>
+
+<script>
+    function loaded() {
+        document.body.className = "loaded";
+        console.log("loaded")
+    }
+</script>
+
+<body class="preload" onload='setTimeout("loaded()", 150)'>
+
+    <div class="sidebar">
+        <a href="../index.html" style="font-size: 25px; font-weight: bold; padding: 15px 16px 15px 16px;">Home</a>
+        <div class="header">Host</div>
+        <a href="help.html#start_room">cad start</a>
+        <a href="help.html#create_room">cad create</a>
+        <a href="help.html#kick_user">cad kick</a>
+        <div class="header">Czar</div>
+        <a href="help.html#czar_submit">cad submit</a>
+        <div class="header">Non-Czar</div>
+        <a href="help.html#user_submit">cad submit</a>
+        <a href="help.html#user_cards">cad cards</a>
+        <div class="header">Other</div>
+        <a href="help.html#join_room">cad join</a>
+        <a href="help.html#leave">cad leave</a>
+        <a href="help.html#scores">cad scores</a>
+        <a href="help.html#new_cards">cad reshuffle</a>
+        <div class="header">Non-DM</div>
+        <a href="help.html#stats">cad stats</a>
+        <a href="help.html#credits">cad credits</a>
+    </div>
+
+    <div class="main">
+        <h1>Welcome to Cards Against Discord's help page!</h1>
+        <h2>Click on the command you need help with.</h2>
+        <div class="spacer">Host</div>
+        <div class="command">
+            <h1 id="start_room">cad start</h1>
+            <p class="desc">Starts the room.</p>
+            <p class="format">Format: <code class="code">cad start</code></p>
+            <p class="format">Usage example #1: <code class="code">cad start</code></p>
+        </div>
+        <div class="command">
+            <h1 id="create_room">cad create</h1>
+            <p class="desc">Create a room with an optional password.</p>
+            <p class="format">Format: <code class="code">cad create [opt. password]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad create my_password</code></p>
+        </div>
+        <div class="command">
+            <h1 id="kick_user">cad kick</h1>
+            <p class="desc">Kicks the user with that number on the scoreboard.</p>
+            <p class="format">Format: <code class="code">cad kick [user number]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad kick 2</code></p>
+        </div>
+        <div class="spacer">Czar</div>
+        <div class="command">
+            <h1 id="czar_submit">cad submit</h1>
+            <p class="desc">Pick the specified card to win the round.</p>
+            <p class="format">Format: <code class="code">cad submit [card number]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad submit 1</code></p>
+        </div>
+        <div class="spacer">Non-Czar</div>
+        <div class="command">
+            <h1 id="user_submit">cad submit</h1>
+            <p class="desc">Submit the specified card to be judged by the czar.</p>
+            <p class="format">Format: <code class="code">cad submit [card number]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad submit 8</code></p>
+        </div>
+        <div class="command">
+            <h1 id="user_cards">cad cards</h1>
+            <p class="desc">Shows your cards.</p>
+            <p class="format">Format: <code class="code">cad cards</code></p>
+            <p class="format">Usage example #1: <code class="code">cad cards</code></p>
+        </div>
+        <div class="spacer">Other</div>
+        <div class="command">
+            <h1 id="join_room">cad join</h1>
+            <p class="desc">Joins the room with that code (and password, needed)</p>
+            <p class="format">Format: <code class="code">cad join [room code] [opt. password]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad join 5gt2 my_password</code></p>
+        </div>
+        <div class="command">
+            <h1 id="leave">cad leave</h1>
+            <p class="desc">Leaves the room you're currently in.</p>
+            <p class="format">Format: <code class="code">cad leave</code></p>
+            <p class="format">Usage example #1: <code class="code">cad leave</code></p>
+        </div>
+        <div class="command">
+            <h1 id="scores">cad scores</h1>
+            <p class="desc">Shows the room's scoreboard.</p>
+            <p class="format">Format: <code class="code">cad scores</code></p>
+            <p class="format">Usage example #1: <code class="code">cad scores</code></p>
+        </div>
+        <div class="command">
+            <h1 id="new_cards">cad reshuffle</h1>
+            <p class="desc">Reshuffles your hand, giving you new cards.</p>
+            <p class="format">Format: <code class="code">cad reshuffle</code></p>
+            <p class="format">Usage example #1: <code class="code">cad reshuffle</code></p>
+        </div>
+        <div class="spacer">Non-DM</div>
+        <div class="command">
+            <h1 id="stats">cad stats</h1>
+            <p class="desc">Shows the stats of a user.</p>
+            <p class="format">Format: <code class="code">cad stats [opt. user mention]</code></p>
+            <p class="format">Usage example #1: <code class="code">cad stats @thisuser</code></p>
+        </div>
+        <div class="command">
+            <h1 id="credits">cad credits</h1>
+            <p class="desc">Sends you the credits</p>
+            <p class="format">Format: <code class="code">cad credits</code></p>
+            <p class="format">Usage example #1: <code class="code">cad credits</code></p>
+        </div>
+    </div>
+</body>
+
+</html>
